@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AVE Dubai | Luxury Ritual & Sanctuary</title>
+    <meta name="description" content="Not a restaurant. Not a café. A luxury destination. A memorable experience. A ritual. Discover AVE Dubai.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">A V E</div>
+            <div class="preloader-line-container">
+                <div id="preloader-line" class="preloader-line"></div>
+            </div>
+            <div id="preloader-percentage" class="preloader-percentage">00%</div>
+            <p class="preloader-subtitle">Preparing the Ritual</p>
+        </div>
+    </div>
+
+    <div class="ambient-glow" id="ambient-glow-layer"></div>
+
+    <div class="cinematic-canvas-container">
+        <canvas id="cinema-canvas"></canvas>
+        <video id="cinema-video" playsinline muted preload="auto" webkit-playsinline></video>
+        <div class="canvas-overlay-vignette"></div>
+    </div>
+
+    <header class="luxury-header">
+        <a href="#" class="brand-monogram">AVE</a>
+        <div class="header-meta">DUBAI &bull; 4.8★</div>
+        <button class="action-trigger-vault" id="global-menu-vault-trigger">
+            <span>ENTER THE VAULT</span>
+            <div class="btn-line"></div>
+        </button>
+    </header>
+
+    <div class="vault-curtain" id="vault-curtain-overlay">
+        <div class="vault-curtain-bg"></div>
+        <div class="vault-content">
+            <div class="vault-logo">AVE</div>
+            <div class="vault-status-text">DECRYPTING EXCLUSIVE RITUALS...</div>
+            <div class="vault-spinner"></div>
+        </div>
+    </div>
+
+    <main id="scroll-wrapper" class="scroll-wrapper">
+        
+        <section class="story-scene" id="scene-01" data-scene="1">
+            <div class="scene-typography">
+                <p class="editorial-label">PROLOGUE</p>
+                <h2 class="serif-title">Time slows down<br><span class="italic-serif">where obsession begins.</span></h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-02" data-scene="2">
+            <div class="scene-typography">
+                <p class="editorial-label">ORIGIN</p>
+                <h2 class="serif-title">Sourced from<br>forgotten micro-lots.</h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-03" data-scene="3">
+            <div class="scene-typography">
+                <p class="editorial-label">CURATION</p>
+                <h2 class="serif-title">One in ten thousand<br><span class="italic-serif">passes the test.</span></h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-04" data-scene="4" data-glow="amber-intense">
+            <div class="scene-typography">
+                <p class="editorial-label">TRANSFORMATION</p>
+                <h2 class="serif-title">Alchemized by fire,<br>perfected by time.</h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-05" data-scene="5">
+            <div class="scene-typography">
+                <p class="editorial-label">RELEASE</p>
+                <h2 class="serif-title">Releasing notes<br><span class="italic-serif">buried deep within.</span></h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-06" data-scene="6">
+            <div class="scene-typography">
+                <p class="editorial-label">CHOREOGRAPHY</p>
+                <h2 class="serif-title">A precise ballet of<br>pressure & temperature.</h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-07" data-scene="7">
+            <div class="scene-typography">
+                <p class="editorial-label">THE VESSEL</p>
+                <h2 class="serif-title">The stage is set upon<br>dark marble & timber.</h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-08" data-scene="8">
+            <div class="scene-typography">
+                <p class="editorial-label">THE DESCENT</p>
+                <h2 class="serif-title">A liquid legacy<br><span class="italic-serif">slowly unfolds.</span></h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-09" data-scene="9">
+            <div class="scene-typography">
+                <p class="editorial-label">HARMONY</p>
+                <h2 class="serif-title">Velvet meets<br>liquid gold.</h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-10" data-scene="10">
+            <div class="scene-typography">
+                <p class="editorial-label">EXPRESSION</p>
+                <h2 class="serif-title">The geometry of<br>sacred devotion.</h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-11" data-scene="11">
+            <div class="scene-typography">
+                <p class="editorial-label">THE CREATION</p>
+                <h2 class="serif-title">This is not coffee.<br><span class="accent-title">This is AVE.</span></h2>
+            </div>
+        </section>
+
+        <section class="story-scene" id="scene-12" data-scene="12" data-glow="pan-past">
+            <div class="scene-typography">
+                <p class="editorial-label">THE SANCTUARY</p>
+                <h2 class="serif-title">Welcome to Dubai's<br>rarest micro-sanctuary.</h2>
+            </div>
+        </section>
+
+        <section class="spatial-scene" id="scene-13">
+            <div class="spatial-grid-layout">
+                <div class="spatial-text-block">
+                    <p class="editorial-label">01 / ARCHITECTURE</p>
+                    <h3 class="serif-sub-display">Where Brutalism Meets Warm Indulgence</h3>
+                    <p class="body-narrative">Cast raw concrete architectural columns soften under hand-stitched Italian nubuck linings. Sculpted lines flow like liquid gold, framing micro-theaters engineered explicitly for your sensory elevation.</p>
+                </div>
+                <div class="spatial-visual-card structural-parallax" data-speed="-1">
+                    <div class="card-image-fallback img-int-1"></div>
+                    <div class="card-border-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spatial-scene" id="scene-14">
+            <div class="spatial-grid-layout layout-inverted">
+                <div class="spatial-visual-card structural-parallax" data-speed="1.2">
+                    <div class="card-image-fallback img-int-2"></div>
+                    <div class="card-border-glow"></div>
+                </div>
+                <div class="spatial-text-block">
+                    <p class="editorial-label">02 / ATMOSPHERE</p>
+                    <h3 class="serif-sub-display">Sculpted for the Avant-Garde</h3>
+                    <p class="body-narrative">Curated table top environments configured daily. Ambient sonic tapestries seamlessly interface with custom dynamic lux meters, evolving fluidly from daybreak clarity to twilight mysteries.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="spatial-scene" id="scene-15">
+            <div class="spatial-grid-layout">
+                <div class="spatial-text-block">
+                    <p class="editorial-label">03 / THE SOCIETY</p>
+                    <h3 class="serif-sub-display">Moments That Linger Beyond Twilight</h3>
+                    <p class="body-narrative">An elite private crossroad of global creatives, tastemakers, and architectural visionaries exchanging thoughts over hyper-isolated single origin infusions.</p>
+                </div>
+                <div class="spatial-visual-card structural-parallax" data-speed="-0.8">
+                    <div class="card-image-fallback img-int-3"></div>
+                    <div class="card-border-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-proof-scene" id="scene-16">
+            <div class="proof-container">
+                <p class="editorial-label align-center">ACCLAIM & CRITIQUE</p>
+                <h2 class="serif-title align-center metrics-display">4.8 <span class="stars-gold">★★★★★</span></h2>
+                <p class="metrics-subtitle align-center">THE ACCLAIMED DUBAI RITUAL EPICENTER</p>
+                
+                <div class="editorial-reviews-grid">
+                    <div class="review-card">
+                        <p class="quote-text">"AVE shatters standard operational concepts of premium hospitality. It is not an espresso, nor a dynamic meal—it is a spiritual architecture engineered in gold and liquid."</p>
+                        <p class="quote-author">— VOGUE ARABIA</p>
+                    </div>
+                    <div class="review-card accent-border">
+                        <p class="quote-text">"The frame-by-frame precision executed within their physical interior matches the obsessive design metrics of an ultra-premium horology maison."</p>
+                        <p class="quote-author">— THE LUXURY POST</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="statement-scene" id="scene-17">
+            <div class="statement-wrapper">
+                <h2 class="monolithic-display-text">DO NOT DINE.<br>EXPERIENCE A RITUAL.</h2>
+            </div>
+        </section>
+
+        <section class="interactive-portal-scene" id="scene-18">
+            <div class="portal-grid">
+                
+                <div class="portal-card" id="card-trigger-menu">
+                    <div class="portal-card-bg-glow"></div>
+                    <div class="portal-card-content">
+                        <p class="portal-tag">TACTILE COLLECTION</p>
+                        <h3 class="portal-title">The Culinary Ledger</h3>
+                        <p class="portal-desc">Unlock curated rare single estate Extractions, avant-garde gastronomy compositions, and architectural pastries.</p>
+                        <button class="portal-action-btn">
+                            <span>ACCESS THE VAULT MENU</span>
+                            <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="portal-card accent-card" id="card-trigger-reserve">
+                    <div class="portal-card-bg-glow"></div>
+                    <div class="portal-card-content">
+                        <p class="portal-tag">EXCLUSIVITY RESERVED</p>
+                        <h3 class="portal-title">Secure Sanctuary</h3>
+                        <p class="portal-desc">Our seating capacity is highly restricted. Request prime alignment space via our digital private desk concierge application.</p>
+                        <a href="https://www.google.com/maps?q=AVE+Dubai" target="_blank" rel="noopener" class="portal-action-btn decoration-none">
+                            <span>REQUEST ALLOCATION</span>
+                            <svg class="arrow-svg" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="luxury-footer">
+                <p>&copy; 2026 AVE DUBAI. ALL RIGHTS ULTRA-RESERVED.</p>
+                <p>DESIGN & EXPERIENCE DESIGNED BY THE ARCHITECTS OF COMPOSITION.</p>
+            </footer>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
