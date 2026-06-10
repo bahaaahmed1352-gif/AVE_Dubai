@@ -1,0 +1,812 @@
+/* ==========================================================================
+   AVE DUBAI - PREMIUM CSS DESIGN TOKENS & SYSTEM ARCHITECTURE
+   ========================================================================== */
+
+:root {
+    /* The Core Luxury Color Palette Matrix */
+    --bg-luxury-black: #0B0B0C;
+    --primary-espresso: #1F1612;
+    --secondary-gold: #D4AF37;
+    --accent-champagne: #F1E5AC;
+    --supporting-cream: #F9F6F0;
+    --lighting-amber: rgba(255, 174, 66, 0.12);
+    --lighting-amber-intense: rgba(255, 136, 0, 0.22);
+    
+    /* Elegant Spatial Structure Scale */
+    --font-serif: 'Cormorant Garamond', 'Cinzel', 'Didot', serif;
+    --font-sans: 'Inter', 'Montserrat', sans-serif;
+    --transition-premium: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hard Reset & High-End Rendering Optimization Flags */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--bg-luxury-black);
+    color: var(--supporting-cream);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Master Smooth Scrolling Framework Modifications */
+html.lenis {
+    height: auto;
+}
+
+.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+/* Custom Minimalist Global Scrollbar Hiding Mechanics */
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* ==========================================================================
+   PRELOADER & INTERACTIVE TRANSITION ARCHITECTURE
+   ========================================================================== */
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background-color: var(--bg-luxury-black);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader-content {
+    text-align: center;
+    width: 300px;
+}
+
+.preloader-logo {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--accent-champagne);
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.preloader-line-container {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.07);
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.preloader-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary-gold);
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+.preloader-percentage {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: var(--secondary-gold);
+}
+
+.preloader-subtitle {
+    font-family: var(--font-serif);
+    font-size: 0.75rem;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    color: rgba(249, 246, 240, 0.4);
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   BACKGROUND VOLUMETRIC ENVIRONMENT LAYER
+   ========================================================================== */
+
+.ambient-glow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background: radial-gradient(circle, var(--lighting-amber) 0%, rgba(11,11,12,0) 70%);
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    will-change: background, opacity;
+}
+
+.cinematic-canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--bg-luxury-black);
+}
+
+#cinema-canvas, #cinema-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Controlled dynamically by VideoScrubber module engine */
+}
+
+.canvas-overlay-vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(11,11,12,0) 30%, rgba(11,11,12,0.85) 100%);
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   FIXED UI NAVIGATION LAYER
+   ========================================================================== */
+
+.luxury-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.brand-monogram {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    color: var(--supporting-cream);
+    text-decoration: none;
+    pointer-events: auto;
+    transition: var(--transition-fast);
+}
+
+.brand-monogram:hover {
+    color: var(--accent-champagne);
+    text-shadow: 0 0 15px rgba(241, 229, 172, 0.4);
+}
+
+.header-meta {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: rgba(249, 246, 240, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 20px;
+    display: none; /* Fluid responsive display scale */
+}
+
+@media(min-width: 768px) {
+    .header-meta { display: block; }
+}
+
+.action-trigger-vault {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    pointer-events: auto;
+    padding: 10px 0;
+    position: relative;
+}
+
+.action-trigger-vault span {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: var(--secondary-gold);
+    display: block;
+    transition: var(--transition-fast);
+}
+
+.btn-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary-gold);
+    margin-top: 6px;
+    transform: scaleX(0.4);
+    transform-origin: right center;
+    transition: var(--transition-premium);
+}
+
+.action-trigger-vault:hover span {
+    color: var(--accent-champagne);
+}
+
+.action-trigger-vault:hover .btn-line {
+    transform: scaleX(1);
+    transform-origin: left center;
+    background-color: var(--accent-champagne);
+}
+
+/* ==========================================================================
+   THE EXPERENTIAL VAULT TRANSITION ENGINE
+   ========================================================================== */
+
+.vault-curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.vault-curtain-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #050505;
+    border: 0px solid var(--secondary-gold);
+    transform: scale(1.1);
+    transition: var(--transition-premium);
+}
+
+.vault-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.vault-logo {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    letter-spacing: 0.3em;
+    color: var(--accent-champagne);
+    margin-bottom: 20px;
+}
+
+.vault-status-text {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    color: var(--secondary-gold);
+    margin-bottom: 30px;
+}
+
+.vault-spinner {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-left: 1px solid var(--secondary-gold);
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: rotateVault 1.2s linear infinite;
+}
+
+@keyframes rotateVault {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ==========================================================================
+   FOREGROUND SYSTEM CONTENT PLATFORM (18 SECTIONS ARCHITECTURE)
+   ========================================================================== */
+
+.scroll-wrapper {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+}
+
+/* Standardized Typography Cinematic Scenery Overlay CSS Blueprint */
+.story-scene {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.scene-typography {
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(50px);
+    will-change: transform, opacity;
+}
+
+.editorial-label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    color: var(--secondary-gold);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.serif-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 5.5vw, 4.8rem);
+    font-weight: 300;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+    color: var(--supporting-cream);
+    text-transform: uppercase;
+}
+
+.italic-serif {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0.02em;
+}
+
+.accent-title {
+    color: var(--accent-champagne);
+    text-shadow: 0 0 40px rgba(241, 229, 172, 0.25);
+}
+
+/* Align tools */
+.align-center { text-align: center; }
+
+/* ==========================================================================
+   SPATIAL ARCHITECTURAL OVERLAY SECTIONS (SCENES 13-15)
+   ========================================================================== */
+
+.spatial-scene {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 120px 8%;
+    position: relative;
+    background: linear-gradient(180deg, rgba(11,11,12,0) 0%, rgba(8,8,9,0.85) 50%, rgba(11,11,12,0) 100%);
+}
+
+.spatial-grid-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+@media(min-width: 992px) {
+    .spatial-grid-layout {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+    .spatial-grid-layout.layout-inverted {
+        grid-template-columns: 0.9fr 1.1fr;
+    }
+}
+
+.spatial-text-block {
+    max-width: 540px;
+}
+
+.serif-sub-display {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+    color: var(--accent-champagne);
+    margin-bottom: 25px;
+}
+
+.body-narrative {
+    font-family: var(--font-sans);
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(249, 246, 240, 0.7);
+    letter-spacing: 0.03em;
+}
+
+.spatial-visual-card {
+    position: relative;
+    aspect-ratio: 4/5;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.card-image-fallback {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(35%) brightness(65%);
+    transition: var(--transition-premium);
+}
+
+/* CSS-driven Geometric Spatial Fallbacks mirroring Dubai Architecture */
+.img-int-1 {
+    background-image: linear-gradient(135deg, #1f1612 0%, #0b0b0c 100%);
+    position: relative;
+}
+.img-int-1::after {
+    content: ''; position: absolute; top: 25%; left: 25%; width: 50%; height: 50%;
+    border: 1px solid var(--secondary-gold); opacity: 0.15; transform: rotate(45deg);
+}
+
+.img-int-2 {
+    background-image: linear-gradient(225deg, #111 0%, #1f1612 100%);
+}
+.img-int-2::after {
+    content: ''; position: absolute; bottom: 10%; right: 10%; width: 60%; height: 2px;
+    background: var(--secondary-gold); opacity: 0.2;
+}
+
+.img-int-3 {
+    background-image: linear-gradient(45deg, #0b0b0c 0%, #29292b 100%);
+}
+
+.spatial-visual-card:hover .card-image-fallback {
+    filter: grayscale(10%) brightness(85%);
+    transform: scale(1.04);
+}
+
+.card-border-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 30px rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   SOCIAL PROOF ARCHITECTURE SYSTEM (SCENE 16)
+   ========================================================================== */
+
+.social-proof-scene {
+    width: 100%;
+    min-height: 100vh;
+    padding: 140px 8%;
+    background: rgba(8, 8, 9, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proof-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.metrics-display {
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    letter-spacing: -0.02em;
+    color: var(--supporting-cream);
+    line-height: 1;
+    margin-top: 10px;
+}
+
+.stars-gold {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--secondary-gold);
+    vertical-align: middle;
+    letter-spacing: 0.1em;
+    margin-left: 10px;
+    display: block;
+}
+
+@media(min-width: 576px) {
+    .stars-gold { display: inline-block; }
+}
+
+.metrics-subtitle {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    color: rgba(249, 246, 240, 0.4);
+    margin-top: 15px;
+    margin-bottom: 80px;
+}
+
+.editorial-reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media(min-width: 768px) {
+    .editorial-reviews-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.review-card {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 50px 40px;
+    border-radius: 2px;
+    transition: var(--transition-premium);
+}
+
+.review-card.accent-border {
+    border-top: 2px solid var(--secondary-gold);
+}
+
+.review-card:hover {
+    background-color: rgba(31, 22, 18, 0.2);
+    border-color: rgba(212, 175, 55, 0.15);
+    transform: translateY(-5px);
+}
+
+.quote-text {
+    font-family: var(--font-serif);
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(249, 246, 240, 0.85);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.quote-author {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--secondary-gold);
+}
+
+/* ==========================================================================
+   MONOLITHIC CLOSING DISPLAY STATEMENT (SCENE 17)
+   ========================================================================== */
+
+.statement-scene {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.monolithic-display-text {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 7.5vw, 7rem);
+    line-height: 1.1;
+    letter-spacing: 0.12em;
+    text-align: center;
+    font-weight: 400;
+    background: linear-gradient(180deg, var(--supporting-cream) 30%, rgba(249,246,240,0.3) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   ULTRA-PREMIUM PORTAL INTERFACE DESIGN SYSTEM (SCENE 18 + FOOTER)
+   ========================================================================== */
+
+.interactive-portal-scene {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px 8% 40px 8%;
+    background: linear-gradient(180deg, rgba(11,11,12,0) 0%, #050506 100%);
+    position: relative;
+}
+
+.portal-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media(min-width: 868px) {
+    .portal-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.portal-card {
+    position: relative;
+    background-color: rgba(11, 11, 12, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 60px 45px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition-premium);
+}
+
+.portal-card-bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(214, 175, 55, 0.06) 0%, rgba(0,0,0,0) 70%);
+    opacity: 0;
+    transition: var(--transition-premium);
+    pointer-events: none;
+}
+
+.portal-card.accent-card {
+    border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.portal-card.accent-card .portal-card-bg-glow {
+    background: radial-gradient(circle, rgba(214, 175, 55, 0.12) 0%, rgba(0,0,0,0) 70%);
+    opacity: 0.5;
+}
+
+.portal-card:hover {
+    border-color: var(--secondary-gold);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.portal-card:hover .portal-card-bg-glow {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.portal-card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.portal-tag {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    color: var(--secondary-gold);
+    margin-bottom: 15px;
+}
+
+.portal-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--supporting-cream);
+    margin-bottom: 20px;
+}
+
+.portal-desc {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(249, 246, 240, 0.6);
+    margin-bottom: 40px;
+}
+
+.portal-action-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.portal-action-btn span {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--supporting-cream);
+    transition: var(--transition-fast);
+}
+
+.arrow-svg {
+    width: 20px;
+    height: 20px;
+    color: var(--supporting-cream);
+    transform: translateX(0);
+    transition: var(--transition-premium);
+}
+
+.portal-card:hover .portal-action-btn span {
+    color: var(--accent-champagne);
+}
+
+.portal-card:hover .arrow-svg {
+    color: var(--accent-champagne);
+    transform: translateX(8px);
+}
+
+.decoration-none {
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   LUXURY BRAND FOOTER
+   ========================================================================== */
+
+.luxury-footer {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(min-width: 768px) {
+    .luxury-footer {
+        flex-direction: row;
+    }
+}
+
+.luxury-footer p {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: rgba(249, 246, 240, 0.3);
+    text-align: center;
+}
